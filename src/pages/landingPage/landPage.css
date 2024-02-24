@@ -639,4 +639,9 @@
     .gal_col {
         height: 150px;
     }
+
+    .expertise_line {
+        top: 15%;
+        height: 1200px;
+    }
 }
