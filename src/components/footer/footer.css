@@ -1,0 +1,41 @@
+footer {
+    width: 100%;
+    color: var(--text);
+}
+
+.footer_cont, .foot_main_head {
+    width: 100%;
+}
+
+.foot_main {
+    padding: 5rem;
+    text-align: center;
+}
+
+.foot_btn {
+    margin: 20px auto 0;
+}
+
+.foot_bottom {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .foot_main {
+        padding: 4rem 3rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .foot_main {
+        padding: 4rem 30px;
+    }
+}
+
+@media (max-width: 428px) {
+    .foot_main {
+        padding: 4rem 20px;
+    }
+}

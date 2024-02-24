@@ -1,0 +1,211 @@
+header {
+    width: 100%;
+    height: 100vh;
+    background: url(https://ik.imagekit.io/on9x61d60/headImg/blob-scene-haikei.png?updatedAt=1708721014847);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.crown,
+.micro,
+.bulb {
+    font-size: 50px;
+    position: absolute;
+}
+
+.crown {
+    top: 32px;
+    right: 47%;
+    transform: rotate(-55deg);
+}
+
+.micro {
+    top: 32px;
+    right: 2%;
+}
+
+.bulb {
+    bottom: 150px;
+    left: 38%;
+}
+
+.head_cont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 60px;
+    padding: 5rem;
+}
+
+.head_info,
+.head_img_cont {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 40px;
+}
+
+.head_content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.head_content h1 {
+    font-size: 30px;
+}
+
+.head_content p {
+    font-size: 20px;
+}
+
+.author {
+    color: var(--primary);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.head_btn,
+.expertise_btn,
+.foot_btn {
+    width: 250px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary);
+}
+
+.head_btn a,
+.expertise_btn a,
+.foot_btn a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.head_img_cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.head_imgs {
+    display: flex;
+    gap: 20px;
+}
+
+.head_info h1 {
+    font-size: 25px;
+}
+
+.img_list {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.img_list img {
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.img_list:first-child img {
+    width: 400px;
+    height: 300px;
+}
+
+.img_list:last-child img {
+    width: 100px;
+    height: 300px;
+}
+
+.head_img2 .img_list:first-child img,
+.head_img2 .img_list:last-child img {
+    width: 250px;
+    height: 100px;
+}
+
+@media (max-width: 767px) {
+    header {
+        height: fit-content;
+        background: url(../../../assets/headImg/blob-scene-haikei.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .crown {
+        left: 2%;
+    }
+
+    .micro {
+        bottom: 35% !important;
+        top: auto;
+        right: 10%;
+    }
+
+    .bulb {
+        bottom: 8%;
+        right: 40%;
+        left: auto;
+    }
+
+    .head_cont {
+        flex-direction: column-reverse;
+        row-gap: 40px;
+        padding: 4rem 3rem;
+    }
+
+    .head_info,
+    .head_img_cont {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .img_list:first-child {
+        width: 75%;
+    }
+
+    .img_list:last-child {
+        width: 25%;
+    }
+
+    .head_img2 .img_list:first-child,
+    .head_img2 .img_list:last-child {
+        width: 50%;
+    }
+
+    .img_list:first-child img,
+    .img_list:last-child img,
+    .head_img2 .img_list:first-child img,
+    .head_img2 .img_list:last-child img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .head_cont {
+        padding: 4rem 30px;
+    }
+
+    .bulb, .micro {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .head_cont {
+        padding: 4rem 20px;
+    }
+}
