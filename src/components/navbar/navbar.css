@@ -67,7 +67,7 @@ nav {
     width: 100%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 912px) {
     .nav_cont {
         padding: 0 3rem;
     }
@@ -78,11 +78,11 @@ nav {
     }
 
     .nav_list {
-        position: fixed;
-        left: -170vw;
-        top: 0;
-        width: 70vh;
+        width: 70vw;
         height: 100%;
+        position: fixed;
+        left: -100vw;
+        top: 0;
         background-color: var(--secondary);
         z-index: 10;
         padding: 20px 0 0;
@@ -105,7 +105,7 @@ nav {
 
     .nav_links li a {
         padding: 20px 15px;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .nav_burger, .close_nav {

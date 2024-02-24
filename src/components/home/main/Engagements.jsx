@@ -29,14 +29,14 @@ function Engagements() {
   ];
 
   return (
-    <div className="engagements">
+    <div className="engagements" id='engagement'>
       <div className="engage_head">
         <h1>My Engagement and Collaboration</h1>
       </div>
       <div className='engagement_cont'>
         {
           events.map((event) => (
-            <div className="event_list">
+            <div key={event.id} className="event_list">
               <div className="event_id">
                 <h3>{event.id <= 9 ? `0${event.id}` : event.id}</h3>
               </div>

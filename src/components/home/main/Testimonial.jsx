@@ -27,14 +27,14 @@ function Testimonial() {
         }
     ]
   return (
-    <div className='testimonial'>
+    <div className='testimonial' id='testimonial'>
         <div className="testimonial_head">
             <h1>Testimonial from past collaboration</h1>
         </div>
         <div className="testimonial_cont">
             {
                 glassTemp.map((glass) => (
-                    <div className="my_glass">
+                    <div key={glass.id} className="my_glass">
                         <div className="user_profile">
                             <div className="user_img">
                                 <img src={glass.userImg} alt="" />

@@ -1,18 +1,21 @@
 import React from 'react';
-import head4 from '../../../assets/headImg/head4.jpg';
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 import { Link } from 'react-router-dom';
 
 
 function Subscribe() {
     return (
-        <div className='subscribe'>
+        <div className='subscribe' id='contact'>
             <div className="subscribe_and_socials">
                 <div className="subscribe_form">
                     <div className="sub_form_head">
                         <h1>
-                            Subscribe to my newsletter today for exclusive content and updates!
+                            LET'S CONNECT
                         </h1>
+                        <p>
+                            Reach out to me directly! Whether you have questions or just want to say hello, I'm here to chat. I can't wait to hear from you!
+                        </p>
                     </div>
                     <form action="" className="sub_form">
                         <div className="sub_inputs">
@@ -23,17 +26,23 @@ function Subscribe() {
                                 <input type="text" placeholder='Your Email' />
                             </div>
                             <div className="inp_ctrl">
-                                <textarea name="" placeholder='Message ( optional )'></textarea>
+                                <input type="text" placeholder='Your Phone No.' />
+                            </div>
+                            <div className="inp_ctrl">
+                                <input type="text" placeholder='Your Company (optional)' />
+                            </div>
+                            <div className="inp_ctrl">
+                                <textarea name="" placeholder='Your Message'></textarea>
                             </div>
                         </div>
                         <div className="sub_btn">
-                            <button>Subscribe</button>
+                            <button>Send Message</button>
                         </div>
                     </form>
                 </div>
                 <div className="socials_cont">
                     <div className="social_head">
-                        <h3>Follow me on</h3>
+                        <h3>Connect with me via</h3>
                     </div>
                     <div className="social_links">
                         <Link>
@@ -46,10 +55,10 @@ function Subscribe() {
                             <FaLinkedin />
                         </Link>
                         <Link>
-                            <FaFacebook />
+                            <FaWhatsapp />
                         </Link>
                         <Link>
-                            <FaYoutube />
+                            <SiGmail />
                         </Link>
                     </div>
                 </div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 function Gallery() {
     return (
-        <div className="gallery">
+        <div className="gallery" id='gallery'>
             <div className="gallery_head">
                 <h1>Gallery</h1>
             </div>

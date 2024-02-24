@@ -8,16 +8,18 @@ import AboutMe from '../../components/home/main/AboutMe';
 import Gallery from '../../components/home/main/Gallery';
 import Testimonial from '../../components/home/main/Testimonial';
 import Subscribe from '../../components/home/main/Subscribe';
+import Specialty from '../../components/home/main/Specialty';
 
 function LandingPage() {
   return (
     <div className='landing_page'>
         <LandHead />
+        <AboutMe />
         <Services />
         <Experience />
         <Engagements />
         <Gallery />
-        <AboutMe />
+        <Specialty />
         <Testimonial />
         <Subscribe />
     </div>

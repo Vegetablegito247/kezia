@@ -6,7 +6,8 @@
 .service_cont,
 .service_list,
 .expertise,
-.expertise_list {
+.expertise_list,
+.about_content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,20 +16,26 @@
 .services,
 .engagements,
 .about_me,
-.testimonial {
+.testimonial,
+.specialty {
     width: 100%;
     padding: 5rem;
 }
 
-.about_me,
+.specialty,
 .services {
     position: relative;
+}
+
+.about_content {
+    row-gap: 10px;
 }
 
 .service_head,
 .engage_head,
 .gallery_head,
 .about_head,
+.specialty_head,
 .testimonial_head {
     width: 100%;
     text-align: center;
@@ -38,7 +45,8 @@
 .service_head h1,
 .engage_head h1,
 .gallery_head h1,
-.about_head h1 {
+.about_head h1,
+.specialty_head h1{
     font-size: 30px;
 }
 
@@ -110,7 +118,8 @@
 
 .service_content p,
 .expertise_content p,
-.expertise_comment p {
+.expertise_comment p,
+.about_content p {
     font-size: 18px;
 }
 
@@ -249,6 +258,17 @@
     transform: rotate(270deg);
 }
 
+.serv_line, .expertise_line {
+    width: 2px;
+    border: 2px dashed var(--text);
+    position: absolute;
+    display: none;
+    border-left: 0;
+    border-bottom: 0;
+    border-top: 0;
+    z-index: -5;
+}
+
 .serv_circle {
     top: 35%;
     left: 3%;
@@ -381,9 +401,13 @@
     background-color: var(--secondary);
 }
 
+.sub_form_head {
+    text-align: center;
+}
+
 .sub_form_head h1 {
     font-size: 25px;
-    text-align: center;
+    margin-bottom: 10px;
 }
 
 .sub_form {
@@ -478,13 +502,14 @@
     object-fit: cover;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 912px) {
 
     .services,
     .experience,
     .engagements,
     .about_me,
     .testimonial,
+    .specialty,
     .gallery,
     .subscribe {
         width: 100%;
@@ -544,6 +569,25 @@
     .serv_circle {
         display: none;
     }
+
+    .serv_line, .expertise_line {
+        display: block;
+        left: 15%;
+    }
+
+    .serv_line {
+        top: 25%;
+        height: 700px;
+    }
+
+    .serv_line2, .expertise_line2 {
+        left: 80%;
+    }
+
+    .expertise_line {
+        top: 15%;
+        height: 1000px;
+    }
 }
 
 @media (max-width: 650px) {
@@ -564,6 +608,7 @@
     .experience,
     .engagements,
     .about_me,
+    .specialty,
     .testimonial,
     .gallery,
     .subscribe {
@@ -580,9 +625,18 @@
     .experience,
     .engagements,
     .about_me,
+    .specialty,
     .testimonial,
     .gallery,
     .subscribe {
         padding: 4rem 20px;
+    }
+
+    .gal_idle {
+        height: 250px;
+    }
+
+    .gal_col {
+        height: 150px;
     }
 }

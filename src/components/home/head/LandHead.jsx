@@ -6,6 +6,10 @@ import { GiMicrophone } from "react-icons/gi";
 import { IoBulbOutline } from "react-icons/io5";
 
 function LandHead() {
+  //Getting date and month
+  const year = new Date().getFullYear();
+  const month = new Date().getMonth() + 1;
+
   return (
     <header>
       <div className="head_cont">
@@ -17,7 +21,7 @@ function LandHead() {
             </p>
           </div>
           <div className="head_btn">
-            <Link to='https://calendly.com/lawalsakamujeeb'>
+            <Link to={`https://calendly.com/gracemacbruce/30min?month=${year}-${month}`} target="_blank">
               <span>Book an appointment</span>
             </Link>
           </div>

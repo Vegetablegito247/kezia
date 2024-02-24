@@ -137,7 +137,7 @@ header {
     height: 100px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 912px) {
     header {
         height: fit-content;
         background: url(../../../assets/headImg/blob-scene-haikei.png);
