@@ -1,6 +1,5 @@
 import React from 'react';
 import './landHead.css';
-import head2 from '../../../assets/headImg/head2.jpg';
 import { Link } from 'react-router-dom';
 import { LuCrown } from "react-icons/lu";
 import { GiMicrophone } from "react-icons/gi";
