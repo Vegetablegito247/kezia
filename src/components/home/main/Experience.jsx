@@ -1,4 +1,5 @@
 import React from 'react';
+import CountUp from 'react-countup';
 
 function Experience() {
   return (
@@ -20,11 +21,11 @@ function Experience() {
                 <div className="big_circle">
                     <div className="small_circle"></div>
                 </div>
-                <div className="exp_count">
+                <div className="exp_count exp_count2">
                     <h1>+200</h1>
                     <span>exp</span>
                 </div>
-                <div className="exp_content">
+                <div className="exp_content exp_content2">
                     <p>of notable engagements and hosting</p>
                 </div>
             </div>
@@ -32,8 +33,8 @@ function Experience() {
                 <div className="big_circle">
                     <div className="small_circle"></div>
                 </div>
-                <div className="exp_count">
-                    <h1>+1000</h1>
+                <div className="exp_count exp_count3">
+                    <h1>1000</h1>
                 </div>
                 <div className="exp_content">
                     <p>connections made and networking</p>

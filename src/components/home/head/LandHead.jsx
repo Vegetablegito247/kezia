@@ -52,10 +52,10 @@ function LandHead() {
               <img src="https://ik.imagekit.io/on9x61d60/headImg/head1.jpeg?updatedAt=1708721032468" alt="" />
             </motion.div>
             <motion.div
-              // initial={{ x: 100, opacity: 0 }}
-              // transition={{ delay: .6, duration: 1, ease: "easeInOut" }}
-              // whileInView={{ x: 0, opacity: 1 }}
-              // viewport={{ once: true }}
+              initial={{ y: -100, opacity: 0 }}
+              transition={{ delay: .6, duration: 1, ease: "easeInOut" }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
               className="img_list"
             >
               <img src="https://ik.imagekit.io/on9x61d60/headImg/head2.jpg?updatedAt=1708721017965" alt="" />

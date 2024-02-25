@@ -172,6 +172,10 @@
     align-items: center;
 }
 
+.exp_count2 {
+    left: 20%;
+}
+
 .exp_count h1 {
     font-size: 80px;
 }
@@ -532,13 +536,17 @@
         height: 200px;
     }
 
+    .exp_count h1 {
+        font-size: 50px;
+    }
+
+    .exp_content2 {
+        left: 5%;
+    }
+
     .small_circle {
         width: 50%;
         height: 50%;
-    }
-
-    .exp_count h1 {
-        font-size: 50px;
     }
 
     .engagement_cont {
@@ -600,6 +608,14 @@
     .exp_links {
         width: 200px;
         height: 200px;
+    }
+
+    .exp_count2 {
+        left: 17%;
+    }
+
+    .exp_content2 {
+        left: 5%;
     }
 }
 

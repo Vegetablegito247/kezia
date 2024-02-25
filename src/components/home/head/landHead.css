@@ -178,11 +178,11 @@ header {
         height: fit-content;
     }
 
-    .img_list:first-child {
+    .head_imgs .img_list:first-child {
         width: 75%;
     }
 
-    .img_list:last-child {
+    .head_imgs .img_list:last-child {
         width: 25%;
     }
 
