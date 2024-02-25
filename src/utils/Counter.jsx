@@ -1,23 +1,17 @@
-import { animate } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
+import { useEffect } from 'react';
 
-function Counter({ from, to }) {
-  const nodeRef = useRef();
+function Counter () {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, Math.round);
 
   useEffect(() => {
-    const node = nodeRef.current;
+    const animation = animate(count, 100, {duration: 100});
 
-    const controls = animate(from, to, {
-      duration: 2,
-      onUpdate(value) {
-        node.textContent = value.toFixed(0);
-      },
-    });
+    return animation.stop;
+  }, [])
 
-    return () => controls.stop();
-  }, [from, to]);
-
-  return <span ref={nodeRef} />;
+  return <motion.h1>{rounded}</motion.h1>
 }
 
 export default Counter;

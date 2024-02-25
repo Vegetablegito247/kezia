@@ -1,14 +1,20 @@
 import React from 'react';
-import { FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 
 function Subscribe() {
     return (
         <div className='subscribe' id='contact'>
             <div className="subscribe_and_socials">
-                <div className="subscribe_form">
+                <motion.div
+                    className="subscribe_form"
+                    initial={{ x: -100, opacity: 0 }}
+                    transition={{ delay: .2, duration: 1, ease: "easeInOut" }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                >
                     <div className="sub_form_head">
                         <h1>
                             LET'S CONNECT
@@ -36,36 +42,68 @@ function Subscribe() {
                             </div>
                         </div>
                         <div className="sub_btn">
-                            <button>Send Message</button>
+                            <motion.button
+                            whileTap={{ scale: 0.9 }}
+                            >Send Message</motion.button>
                         </div>
                     </form>
-                </div>
-                <div className="socials_cont">
+                </motion.div>
+                <motion.div
+                    className="socials_cont"
+                    initial={{ x: 100, opacity: 0 }}
+                    transition={{ delay: .4, duration: 1, ease: "easeInOut" }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                >
                     <div className="social_head">
                         <h3>Connect with me via</h3>
                     </div>
                     <div className="social_links">
-                        <Link>
+                        <motion.a
+                            animate={{ scale: 1.2 }}
+                            transition={{ repeat: Infinity, duration: 2, delay: .2 }}
+                            whileTap={{ scale: 0.9 }}
+                            href='https://www.instagram.com/visioncentralhub?igsh=MTBoanpoeDFmcGhnMA=='
+                            target="_blank"
+                        >
                             <FaInstagram />
-                        </Link>
-                        <Link>
-                            <FaTwitter />
-                        </Link>
-                        <Link>
+                        </motion.a>
+                        <motion.a
+                            animate={{ scale: 1.2 }}
+                            transition={{ repeat: Infinity, duration: 2, delay: .6 }}
+                        >
                             <FaLinkedin />
-                        </Link>
-                        <Link>
+                        </motion.a>
+                        <motion.a
+                            animate={{ scale: 1.2 }}
+                            transition={{ repeat: Infinity, duration: 2, delay: .8 }}
+                            whileTap={{ scale: 0.9 }}
+                            href='https://wa.me/+16395906536'
+                            target="_blank"
+                        >
                             <FaWhatsapp />
-                        </Link>
-                        <Link>
+                        </motion.a>
+                        <motion.a
+                            animate={{ scale: 1.2 }}
+                            transition={{ repeat: Infinity, duration: 2, delay: 1 }}
+                            whileTap={{ scale: 0.9 }}
+                            href='mailto:macbruce@gmail.com'
+                            target="_blank"
+                        >
                             <SiGmail />
-                        </Link>
+                        </motion.a>
                     </div>
-                </div>
+                </motion.div>
             </div>
-            <div className="me_image">
+            <motion.div 
+            className="me_image"
+            initial={{ x: -100, opacity: 0 }}
+            transition={{ delay: .4, duration: 1, ease: "easeInOut" }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            >
                 <img src="https://ik.imagekit.io/on9x61d60/headImg/head4.jpg?updatedAt=1708721016947" alt="" />
-            </div>
+            </motion.div>
         </div>
     )
 }

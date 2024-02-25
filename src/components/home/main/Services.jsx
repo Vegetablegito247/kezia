@@ -2,6 +2,7 @@ import React from 'react';
 import { IoMdMicrophone } from "react-icons/io";
 import { FaCalendarCheck } from "react-icons/fa";
 import { SlSpeech } from "react-icons/sl";
+import { motion } from 'framer-motion';
 
 function Services() {
     const service = [
@@ -23,18 +24,37 @@ function Services() {
             head: 'Event Public Speaker',
             text: 'I am not just a speaker but a catalyst for change. With a background rooted in Political Science and International Relations and a Masters in Public Administration combined with solid years of experience in Policy advocacy, gender and inclusion,  fundraising, nonprofit management and community building, I brings a unique blend of knowledge, passion, and charisma to every speaking engagement. Whether addressing a small group or a large audience, I inspire, educate, and motivates my audience, leaving a lasting impression that sparks action and drives positive change.'
         },
+    ];
+
+    const animations = [
+        { x: 100, y: 100, opacity: 0 },
+        { x: -100, y: 100, opacity: 0 },
+        { x: 100, y: 100, opacity: 0 },
     ]
     return (
         <div className="services" id='service'>
-            <div className="service_head">
+            <motion.div 
+            className="service_head"
+            initial={{ x: -100, opacity: 0 }}
+            transition={{ delay: .2, duration: 1, ease: "easeInOut" }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            >
                 <h1>
                     My Services
                 </h1>
-            </div>
+            </motion.div>
             <div className='service_cont'>
                 {
-                    service.map((serve) => (
-                        <div key={serve.id} className="service_list">
+                    service.map((serve, index) => (
+                        <motion.div 
+                        key={serve.id} 
+                        className="service_list"
+                        initial={animations[index % animations.length]}
+                        transition={{ delay: .4, duration: 1, ease: "easeInOut" }}
+                        whileInView={{ x: 0, y:0,  opacity: 1 }}
+                        viewport={{ once: true }}
+                        >
                             <div className="service_icon">
                                 {serve.icon}
                             </div>
@@ -42,7 +62,7 @@ function Services() {
                                 <h3>{serve.head}</h3>
                                 <p>{serve.text}</p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))
                 }
             </div>

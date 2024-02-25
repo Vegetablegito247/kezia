@@ -21,7 +21,7 @@ function Experience() {
                     <div className="small_circle"></div>
                 </div>
                 <div className="exp_count">
-                    <h1>+10</h1>
+                    <h1>+200</h1>
                     <span>exp</span>
                 </div>
                 <div className="exp_content">

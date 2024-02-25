@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 function Specialty() {
     //Getting date and month
@@ -34,15 +35,36 @@ function Specialty() {
         }
     ];
 
+    const animations = [
+        { x: 100, y: 100, opacity: 0 },
+        { x: -100, y: 100, opacity: 0 },
+        { x: 100, y: 100, opacity: 0 },
+        { x: -100, y: 100, opacity: 0 },
+        { x: 100, y: 100, opacity: 0 },
+    ]
+
     return (
         <div className='specialty' id='specialty'>
-            <div className="specialty_head">
+            <motion.div
+                className="specialty_head"
+                initial={{ x: -100, opacity: 0 }}
+                transition={{ delay: .2, duration: 1, ease: "easeInOut" }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+            >
                 <h1>Elevating Events with Expertise and Passion</h1>
-            </div>
+            </motion.div>
             <div className="expertise">
                 {
-                    expertiseData.map((data) => (
-                        <div key={data.id} className="expertise_list">
+                    expertiseData.map((data, index) => (
+                        <motion.div
+                            key={data.id}
+                            className="expertise_list"
+                            initial={animations[index % animations.length]}
+                            transition={{ delay: .2, duration: 1, ease: "easeInOut" }}
+                            whileInView={{ x: 0, y: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                        >
                             <div className="expertise_id">
                                 <h3>{data.id <= 9 ? `0${data.id}` : data.id}</h3>
                             </div>
@@ -50,21 +72,34 @@ function Specialty() {
                                 <h3>{data.head}:</h3>
                                 <p>{data.text}</p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))
                 }
             </div>
             <div className="expertise_comment">
-                <div className="expertise_info">
+                <motion.div
+                    className="expertise_info"
+                    initial={{ x: -100, opacity: 0 }}
+                    transition={{ delay: .2, duration: 1, ease: "easeInOut" }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                >
                     <p>
                         Whether you are looking for an event  public speaker to inspire and educate on important issues, an MC to energise your event, or an event host to create a vibrant atmosphere, don’t leave the success of your event to chance. Contact me today to discuss your public speaking needs and take the first step toward creating an unforgettable experience for your audience.
                     </p>
-                </div>
-                <div className="expertise_btn">
+                </motion.div>
+                <motion.div 
+                className="expertise_btn"
+                initial={{ x: 100, opacity: 0 }}
+                transition={{ delay: .2, duration: 1, ease: "easeInOut" }}
+                whileInView={{ x: 0, opacity: 1 }}
+                whileTap={{scale: .9}}
+                viewport={{ once: true }}
+                >
                     <Link to={`https://calendly.com/gracemacbruce/30min?month=${year}-${month}`} target="_blank">
                         <span>Book an Appointment</span>
                     </Link>
-                </div>
+                </motion.div>
             </div>
             <div className="half_circle"></div>
             <div className="half_circle half_circle2"></div>

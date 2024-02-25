@@ -23,7 +23,7 @@ function Footer() {
                     </div>
                 </div>
                 <div className="foot_bottom">
-                    <span>Kezia.com &copy; 2024</span>
+                    <span>Kezia.com &copy; {year}</span>
                 </div>
             </div>
         </footer>

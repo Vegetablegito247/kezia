@@ -110,31 +110,36 @@ header {
     font-size: 25px;
 }
 
-.img_list {
-    width: fit-content;
-    height: fit-content;
+.head_imgs .img_list:first-child {
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.head_imgs .img_list:last-child {
+    width: 100px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
     position: relative;
 }
 
 .img_list img {
     object-fit: cover;
-    border-radius: 20px;
 }
 
-.img_list:first-child img {
-    width: 400px;
-    height: 300px;
+.img_list img {
+    width: 100%;
+    height: 100%;
 }
 
-.img_list:last-child img {
-    width: 100px;
-    height: 300px;
-}
-
-.head_img2 .img_list:first-child img,
-.head_img2 .img_list:last-child img {
+.head_img2 .img_list:first-child,
+.head_img2 .img_list:last-child{
     width: 250px;
     height: 100px;
+    border-radius: 20px;
 }
 
 @media (max-width: 912px) {

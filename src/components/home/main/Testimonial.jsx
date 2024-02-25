@@ -1,6 +1,7 @@
 import React from 'react';
 import cardBrd from '../../../assets/gallery/cardBrd.jpg';
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+// import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { motion } from 'framer-motion'
 
 function Testimonial() {
     const glassTemp = [
@@ -28,13 +29,26 @@ function Testimonial() {
     ]
   return (
     <div className='testimonial' id='testimonial'>
-        <div className="testimonial_head">
+        <motion.div 
+        className="testimonial_head"
+        initial={{ x: -100, opacity: 0 }}
+        transition={{ delay: .2, duration: 1, ease: "easeInOut" }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        >
             <h1>Testimonial from past collaboration</h1>
-        </div>
+        </motion.div>
         <div className="testimonial_cont">
             {
                 glassTemp.map((glass) => (
-                    <div key={glass.id} className="my_glass">
+                    <motion.div 
+                    key={glass.id} 
+                    className="my_glass"
+                    initial={{ y: 100, opacity: 0 }}
+                    transition={{ delay: .4, duration: 1, ease: "easeInOut" }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    >
                         <div className="user_profile">
                             <div className="user_img">
                                 <img src={glass.userImg} alt="" />
@@ -49,7 +63,7 @@ function Testimonial() {
                                 <p>{glass.comment}</p>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))
             }
             {/* <div className="arrow_btns">

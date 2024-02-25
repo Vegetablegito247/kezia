@@ -1,49 +1,116 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 function Gallery() {
     return (
         <div className="gallery" id='gallery'>
-            <div className="gallery_head">
+            <motion.div
+                className="gallery_head"
+                initial={{ x: -100, opacity: 0 }}
+                transition={{ delay: .2, duration: 1, ease: "easeInOut" }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+            >
                 <h1>Gallery</h1>
-            </div>
+            </motion.div>
             <div className='gallery_cont'>
                 <div className="gallery_list">
-                    <div className="gal_idle">
+                    <motion.div
+                        className="gal_idle"
+                        initial={{ x: 100, opacity: 0 }}
+                        transition={{ delay: .6, duration: 1, ease: "easeInOut" }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        viewport={{ once: true }}
+                    >
                         <img src="https://ik.imagekit.io/on9x61d60/headImg/head4.jpg?updatedAt=1708721016947" alt="" />
-                    </div>
+                    </motion.div>
                     <div className="gal_grid">
-                        <div className="gal_col">
+                        <motion.div
+                            className="gal_col"
+                            initial={{ skew: 60, opacity: 0 }}
+                            transition={{ delay: .6, duration: 1, ease: "easeInOut" }}
+                            whileInView={{ skew: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                        >
                             <img src="https://ik.imagekit.io/on9x61d60/gallery/cardBrd.jpg?updatedAt=1708722521287" alt="" />
-                        </div>
-                        <div className="gal_col">
+                        </motion.div>
+                        <motion.div
+                            className="gal_col"
+                            initial={{ skew: 60, opacity: 0 }}
+                            transition={{ delay: .6, duration: 1, ease: "easeInOut" }}
+                            whileInView={{ skew: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                        >
                             <img src="https://ik.imagekit.io/on9x61d60/gallery/chill.PNG?updatedAt=1708722523921" alt="" />
-                        </div>
-                        <div className="gal_col">
+                        </motion.div>
+                        <motion.div
+                            className="gal_col"
+                            initial={{ skew: 60, opacity: 0 }}
+                            transition={{ delay: .6, duration: 1, ease: "easeInOut" }}
+                            whileInView={{ skew: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                        >
                             <img src="https://ik.imagekit.io/on9x61d60/gallery/elder.JPG?updatedAt=1708722528583" alt="" />
-                        </div>
-                        <div className="gal_col">
+                        </motion.div>
+                        <motion.div
+                            className="gal_col"
+                            initial={{ skew: 60, opacity: 0 }}
+                            transition={{ delay: .6, duration: 1, ease: "easeInOut" }}
+                            whileInView={{ skew: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                        >
                             <img src="https://ik.imagekit.io/on9x61d60/gallery/sing.jpeg?updatedAt=1708722527445" alt="" />
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
                 <div className="gallery_list">
                     <div className="gal_grid">
-                        <div className="gal_col">
+                        <motion.div
+                            className="gal_col"
+                            initial={{ skew: 60, opacity: 0 }}
+                            transition={{ delay: .6, duration: 1, ease: "easeInOut" }}
+                            whileInView={{ skew: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                        >
                             <img src="https://ik.imagekit.io/on9x61d60/gallery/table.jpg?updatedAt=1708722523374" alt="" />
-                        </div>
-                        <div className="gal_col">
+                        </motion.div>
+                        <motion.div
+                            className="gal_col"
+                            initial={{ skew: 60, opacity: 0 }}
+                            transition={{ delay: .6, duration: 1, ease: "easeInOut" }}
+                            whileInView={{ skew: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                        >
                             <img src="https://ik.imagekit.io/on9x61d60/gallery/threePip.jpg?updatedAt=1708722523130" alt="" />
-                        </div>
-                        <div className="gal_col">
+                        </motion.div>
+                        <motion.div
+                            className="gal_col"
+                            initial={{ skew: 60, opacity: 0 }}
+                            transition={{ delay: .6, duration: 1, ease: "easeInOut" }}
+                            whileInView={{ skew: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                        >
                             <img src="https://ik.imagekit.io/on9x61d60/gallery/twoPip.jpg?updatedAt=1708722522465" alt="" />
-                        </div>
-                        <div className="gal_col">
+                        </motion.div>
+                        <motion.div
+                            className="gal_col"
+                            initial={{ skew: 60, opacity: 0 }}
+                            transition={{ delay: .6, duration: 1, ease: "easeInOut" }}
+                            whileInView={{ skew: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                        >
                             <img src="https://ik.imagekit.io/on9x61d60/gallery/vision.jpg?updatedAt=1708722521730" alt="" />
-                        </div>
+                        </motion.div>
                     </div>
-                    <div className="gal_idle">
+                    <motion.div
+                        className="gal_idle"
+                        initial={{ x: -100, opacity: 0 }}
+                        transition={{ delay: .2, duration: 1, ease: "easeInOut" }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        viewport={{ once: true }}
+                    >
                         <img src="https://ik.imagekit.io/on9x61d60/headImg/head2.jpg?updatedAt=1708721017965" alt="" />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
 
 function Engagements() {
   const events = [
@@ -28,22 +29,44 @@ function Engagements() {
     }
   ];
 
+  const animations = [
+    { x: -100, opacity: 0 },
+    { x: 100, opacity: 0 },
+    { x: -100, opacity: 0 },
+    { x: 100, opacity: 0 },
+    { x: -100, opacity: 0 },
+    { x: 100, opacity: 0 }
+  ];
+
   return (
     <div className="engagements" id='engagement'>
-      <div className="engage_head">
+      <motion.div
+        className="engage_head"
+        initial={{ x: 100, opacity: 0 }}
+        transition={{ delay: .2, duration: 1, ease: "easeInOut" }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+      >
         <h1>My Engagement and Collaboration</h1>
-      </div>
+      </motion.div>
       <div className='engagement_cont'>
         {
-          events.map((event) => (
-            <div key={event.id} className="event_list">
+          events.map((event, index) => (
+            <motion.div 
+            key={event.id} 
+            className="event_list"
+            initial={animations[index % animations.length]}
+            transition={{ delay: .4, duration: 1, ease: "easeInOut" }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            >
               <div className="event_id">
                 <h3>{event.id <= 9 ? `0${event.id}` : event.id}</h3>
               </div>
               <div className="event_content">
                 <p>{event.text}</p>
               </div>
-            </div>
+            </motion.div>
           ))
         }
       </div>
