@@ -21,7 +21,7 @@ function AboutMe() {
                 viewport={{ once: true }}
             >
                 <p>
-                    With a Master's degree in Public Administration, I have cultivated a deep understanding of effective communication and leadership. Public speaking isn't just a skill for me—it's a passion. I thrives on the energy of engaging conversations and the opportunity to inspire and empower others through my words.
+                    With a Master's degree in Public Administration, I have cultivated a deep understanding of effective communication and leadership. Public speaking isn't just a skill for me—it's a passion. I thrive on the energy of engaging conversations and the opportunity to inspire and empower others through my words.
                 </p>
                 <p>
                     Beyond the podium, I am a social butterfly at heart. I genuinely enjoy connecting with people from all walks of life, making new friends, and building meaningful relationships. Whether it's networking at events or engaging in lively discussions, Me Kezia-Grace believes in the power of human connection to drive positive change.
