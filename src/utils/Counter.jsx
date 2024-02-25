@@ -1,17 +1,34 @@
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import ScrollTrigger from 'react-scroll-trigger'
 
-function Counter () {
+function Counter({ targetNumber }) {
   const count = useMotionValue(0);
   const rounded = useTransform(count, Math.round);
 
+  const [counterOn, setCounterOn] = useState(false);
+
   useEffect(() => {
-    const animation = animate(count, 100, {duration: 100});
+    let animation;
+    if (counterOn) {
+      count.set(0);
+      animation = animate(count, targetNumber, { duration: 2 });
+    }
 
-    return animation.stop;
-  }, [])
+    return () => {
+      if(animation) {
+        animation.stop();
+      }
+    }
+  }, [count, targetNumber, counterOn])
 
-  return <motion.h1>{rounded}</motion.h1>
+  return (
+    <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
+      {
+        counterOn && <motion.h1>{rounded}</motion.h1>
+      }
+    </ScrollTrigger>
+  )
 }
 
 export default Counter;
