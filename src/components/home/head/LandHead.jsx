@@ -1,5 +1,6 @@
 import React from 'react';
 import './landHead.css';
+import head2 from '../../../assets/headImg/head2.jpg';
 import { Link } from 'react-router-dom';
 import { LuCrown } from "react-icons/lu";
 import { GiMicrophone } from "react-icons/gi";
@@ -52,10 +53,10 @@ function LandHead() {
               <img src="https://ik.imagekit.io/on9x61d60/headImg/head1.jpeg?updatedAt=1708721032468" alt="" />
             </motion.div>
             <motion.div
-              initial={{ x: 100, opacity: 0 }}
-              transition={{ delay: .6, duration: 1, ease: "easeInOut" }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
+              // initial={{ x: 100, opacity: 0 }}
+              // transition={{ delay: .6, duration: 1, ease: "easeInOut" }}
+              // whileInView={{ x: 0, opacity: 1 }}
+              // viewport={{ once: true }}
               className="img_list"
             >
               <img src="https://ik.imagekit.io/on9x61d60/headImg/head2.jpg?updatedAt=1708721017965" alt="" />
